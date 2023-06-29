@@ -103,6 +103,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/btroutma/.local/share/nvim/site/pack/packer/start/tagbar",
     url = "https://github.com/majutsushi/tagbar"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/btroutma/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   }
 }
 
