@@ -17,4 +17,7 @@ return require('packer').startup(function(use)
     }
   }
 
+  use {
+    "majutsushi/tagbar"
+  }
 end)

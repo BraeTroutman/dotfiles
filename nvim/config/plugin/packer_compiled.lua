@@ -98,6 +98,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/btroutma/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  tagbar = {
+    loaded = true,
+    path = "/home/btroutma/.local/share/nvim/site/pack/packer/start/tagbar",
+    url = "https://github.com/majutsushi/tagbar"
   }
 }
 
