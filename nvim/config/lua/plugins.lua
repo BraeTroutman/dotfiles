@@ -74,5 +74,17 @@ require('packer').startup(function(use)
       end,
   }
 
+  use 'neovim/nvim-lspconfig'
+
+  use 'williamboman/nvim-lsp-installer'
+
+  use {
+      "folke/which-key.nvim",
+      event = "VimEnter",
+      config = function()
+        require("plugins.whichkey").setup()
+      end,
+  }
+
 end)
 
