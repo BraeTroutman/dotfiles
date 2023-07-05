@@ -4,8 +4,8 @@ local servers = {
     "bashls",
     "clangd",
     "julials",
-    "sumneko_lua",
+    "lua_ls",
 }
 
-require('lsp.install').setup(servers)
+require('lsp.mason').setup(servers)
 require('lsp.setup').setup(servers)

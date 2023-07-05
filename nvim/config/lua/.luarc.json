@@ -1,0 +1,23 @@
+{
+    "workspace.library": [
+        "/home/btroutma/.local/share/nvim/site/pack/packer/start/neodev.nvim/types/stable",
+        "/usr/share/nvim/runtime/lua",
+        "/home/btroutma/.local/share/nvim/site/pack/packer/opt/lualine.nvim/lua",
+        "/home/btroutma/.local/share/nvim/site/pack/packer/opt/which-key.nvim/lua",
+        "/home/btroutma/.local/share/nvim/site/pack/packer/start/bufferline.nvim/lua",
+        "/home/btroutma/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim/lua",
+        "/home/btroutma/.local/share/nvim/site/pack/packer/start/mason.nvim/lua",
+        "/home/btroutma/.local/share/nvim/site/pack/packer/start/neo-tree.nvim/lua",
+        "/home/btroutma/.local/share/nvim/site/pack/packer/start/neodev.nvim/lua",
+        "/home/btroutma/.local/share/nvim/site/pack/packer/start/nui.nvim/lua",
+        "/home/btroutma/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer/lua",
+        "/home/btroutma/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/lua",
+        "/home/btroutma/.local/share/nvim/site/pack/packer/start/nvim-treesitter/lua",
+        "/home/btroutma/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/lua",
+        "/home/btroutma/.local/share/nvim/site/pack/packer/start/packer.nvim/lua",
+        "/home/btroutma/.local/share/nvim/site/pack/packer/start/plenary.nvim/lua",
+        "/home/btroutma/.local/share/nvim/site/pack/packer/start/telescope.nvim/lua",
+        "/home/btroutma/.dotfiles/nvim/config/lua",
+        "${3rd}/luv/library"
+    ]
+}
