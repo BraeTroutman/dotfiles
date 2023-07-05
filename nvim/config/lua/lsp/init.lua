@@ -1,6 +1,10 @@
 local servers = {
     "gopls",
-    "lua_ls",
+    "yamlls",
+    "bashls",
+    "clangd",
+    "julials",
+    "sumneko_lua",
 }
 
 require('lsp.install').setup(servers)
