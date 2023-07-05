@@ -27,8 +27,6 @@ require('packer').startup(function(use)
         }
     }
 
-    use "majutsushi/tagbar"
-
     use {
         "nvim-lualine/lualine.nvim",
         event = "VimEnter",
