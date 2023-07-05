@@ -75,11 +75,5 @@ require('packer').startup(function(use)
 
     use 'folke/neodev.nvim'
 
-    use {
-        "folke/which-key.nvim",
-        event = "VimEnter",
-        config = function()
-            require("plugins.whichkey").setup()
-        end,
-    }
 end)
+
