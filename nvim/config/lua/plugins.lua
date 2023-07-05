@@ -75,5 +75,14 @@ require('packer').startup(function(use)
 
     use 'folke/neodev.nvim'
 
+    use 'mfussenegger/nvim-dap'
+
+    use {
+        'ray-x/go.nvim',
+        config = function()
+            require("go").setup()
+        end,
+    }
+
 end)
 
