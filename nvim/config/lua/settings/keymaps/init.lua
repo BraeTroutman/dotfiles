@@ -6,9 +6,8 @@ whichkey.register({
         name = "file",
         f = { "<cmd>Telescope find_files<cr>", "Find File" },
         r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-        b = { function() print("hello world!") end, "Hello World!" },
-        m = { function() vim.lsp.buf.format() end, "Format Buffer" },
         d = { "<cmd>Telescope lsp_definitions<cr>", "Find definition of object" },
+        c = { "<cmd>Telescope lsp_incoming_calls<cr>", "List incoming calls fn" },
     },
     n = {
         name = "Neotree",
