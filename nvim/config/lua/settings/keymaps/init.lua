@@ -18,4 +18,8 @@ whichkey.register({
         n = { "<cmd>BufferLineCycleNext<cr>", "Next Tab" },
         p = { "<cmd>BufferLineCyclePrev<cr>", "Prev Tab" },
     },
+    e = {
+        name = "Errors",
+        n = { vim.diagnostic.goto_next, "Next error"},
+    },
 }, { prefix = "<leader>" })

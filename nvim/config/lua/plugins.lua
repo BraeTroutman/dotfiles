@@ -90,4 +90,36 @@ require('packer').startup(function(use)
             require("which-key").setup {}
         end,
     }
+
+    use {
+        "mickael-menu/zk-nvim",
+        config = function()
+            require("zk").setup()
+        end,
+    }
+
+    use {
+        "nvim-neorg/neorg",
+        run = ":Neorg sync-parsers", -- This is the important bit!
+        config = function()
+            require("neorg").setup {
+                -- configuration here
+                load = {
+                    ["core.defaults"] = {},
+                    ["core.norg.concealer"] = {},
+                    ["core.norg.dirman"] = {
+                        config = {
+                            workspaces = {
+                                notes = "~/notes",
+                                work = "~/notes/work",
+                                home = "~/notes/home",
+                                zttl = "~/notes/zttl",
+                            },
+                        },
+                    },
+                }
+            }
+        end,
+    }
+
 end)
