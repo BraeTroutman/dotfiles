@@ -17,6 +17,8 @@ whichkey.register({
         name = "Tabs",
         n = { "<cmd>BufferLineCycleNext<cr>", "Next Tab" },
         p = { "<cmd>BufferLineCyclePrev<cr>", "Prev Tab" },
+        x = { "<cmd>bdelete<cr>", "Close this tab" },
+        o = { "<cmd>BufferLineCloseOthers<cr>", "Close all other tabs" },
     },
     e = {
         name = "Errors",

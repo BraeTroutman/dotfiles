@@ -47,11 +47,12 @@ require('packer').startup(function(use)
         run = ':TSUpdate',
         config = function()
             require('nvim-treesitter.configs').setup {
-                ensure_installed = { "c", "go", "lua", "yaml", "julia" },
+                ensure_installed = { "c", "go", "lua", "yaml", "julia", "org" },
                 sync_install = false,
                 auto_install = true,
                 highlight = {
                     enable = true,
+                    additional_vim_regex_highlighting = {'org'},
                 },
             }
         end,
@@ -92,34 +93,16 @@ require('packer').startup(function(use)
     }
 
     use {
-        "mickael-menu/zk-nvim",
+        'nvim-orgmode/orgmode',
         config = function()
-            require("zk").setup()
-        end,
-    }
-
-    use {
-        "nvim-neorg/neorg",
-        run = ":Neorg sync-parsers", -- This is the important bit!
-        config = function()
-            require("neorg").setup {
-                -- configuration here
-                load = {
-                    ["core.defaults"] = {},
-                    ["core.norg.concealer"] = {},
-                    ["core.norg.dirman"] = {
-                        config = {
-                            workspaces = {
-                                notes = "~/notes",
-                                work = "~/notes/work",
-                                home = "~/notes/home",
-                                zttl = "~/notes/zttl",
-                            },
-                        },
-                    },
-                }
+            require('orgmode').setup_ts_grammar()
+            require('orgmode').setup{
+                org_agenda_files = {"~/notes/**/*.org", "~/src/forks/osd-fleet-manager/TODO.org"},
+                org_default_notes_file = "~/notes/index.org",
             }
         end,
     }
+
+    use 'dhruvasagar/vim-table-mode'
 
 end)
