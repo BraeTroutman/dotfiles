@@ -105,4 +105,14 @@ require('packer').startup(function(use)
 
     use 'dhruvasagar/vim-table-mode'
 
+    use {
+        'renerocksai/telekasten.nvim',
+        requires = {'nvim-telescope/telescope.nvim'},
+        config = function()
+            require('telekasten').setup {
+                home = vim.fn.expand("~/notes/kast"),
+            }
+        end
+    }
+
 end)
