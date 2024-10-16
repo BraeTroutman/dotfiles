@@ -104,72 +104,27 @@ source $ZSH/oh-my-zsh.sh
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
- export GOPATH=$(go env GOPATH)
- export GOROOT=/usr/local/go
- export GOBIN=/home/btroutma/go/bin
-
- export PATH=$PATH:$GOPATH/bin
-
-# ocm env utility functions
-ocmenv() {
-    case $1 in
-        "int")
-            local OCMENV=integration
-            ;;
-        "stage")
-            local OCMENV=stage
-            ;;
-        "testing")
-            local OCMENV=testing
-            ;;
-        "prod")
-            local OCMENV=""
-            ;;
-    esac
-
-    echo 'ocm login --token=${OCM_API_TOKEN}' --url=https://api.${OCMENV}.openshift.com
-    if ocm login --token=${OCM_API_TOKEN} --url="https://api.${OCMENV}.openshift.com"; then
-        echo "logged into ocm $1"
-    else
-        echo "Error logging into ocm $1"
-        false
-    fi
-}
-
-ocmint() {                                                                                                              
-    echo 'ocm login --token=${OCM_API_TOKEN} --url=https://api.integration.openshift.com'                            
-    if ocm login --token=${OCM_API_TOKEN} --url=https://api.integration.openshift.com; then                          
-        export BACKPLANE_CONFIG="$HOME/.config/backplane/config.stg.json"                                               
-        echo "Logged into ocm integration 2"                                                                            
-    else                                                                                                                
-        echo "Error logging into ocm integration 2"                                                                     
-        false                                                                                                           
-    fi                                                                                                                  
-}                                                                                                                       
-                                                                                                                        
-ocmstage() {                                                                                                            
-    echo 'ocm login --token=${OCM_API_TOKEN} --url=https://api.stage.openshift.com'                                  
-    if ocm login --token=${OCM_API_TOKEN} --url=https://api.stage.openshift.com; then                                
-        export BACKPLANE_CONFIG="$HOME/.config/backplane/config.stg.json"                                               
-        echo "Logged into ocm stage"                                                                                    
-    else                                                                                                                
-        echo "Error logging into ocm stage"                                                                             
-        false                                                                                                           
-    fi                                                                                                                  
-}                                                                                                                       
-                                                                                                                        
-ocmprod() {                                                                                                             
-    echo 'ocm login --token=${OCM_API_TOKEN} --url=https://api.openshift.com'                                        
-    if ocm login --token=${OCM_API_TOKEN} --url=https://api.openshift.com; then                                      
-        export BACKPLANE_CONFIG="$HOME/.config/backplane/config.json"                                                   
-        echo "Logged into ocm prod"                                                                                     
-    else                                                                                                                
-        echo "Error logging into ocm prod"                                                                              
-        false                                                                                                           
-    fi                                                                                                                  
-} 
+ export JULIAPATH=/home/btroutma/.local/share/julia/julia-1.9.3
+ export REBAR3PATH=/home/btroutma/.cache/rebar3/bin
+ export ELIXIRLSPATH=/home/btroutma/src/elixir-ls
+ export PATH=$PATH:$JULIAPATH/bin:$ELIXIRLSPATH:$REBAR3PATH
 
 alias vi=nvim
 
 source /usr/local/Modules/init/zsh
+
+if [ /home/btroutma/bin/oc ]; then
+  source <(oc completion zsh)
+  compdef _oc oc
+fi
+
+source ${ZDOTDIR}/catppuccin_mocha-zsh-syntax-highlighting.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+if [ -e /home/btroutma/.nix-profile/etc/profile.d/nix.sh ]; then . /home/btroutma/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+source ${HOME}/.asdf/asdf.sh
+
+# source rbenv config
+eval "$(rbenv init - zsh)"
 
