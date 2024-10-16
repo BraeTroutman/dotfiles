@@ -118,9 +118,6 @@ if [ /home/btroutma/bin/oc ]; then
   compdef _oc oc
 fi
 
-source ${ZDOTDIR}/catppuccin_mocha-zsh-syntax-highlighting.zsh
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 if [ -e /home/btroutma/.nix-profile/etc/profile.d/nix.sh ]; then . /home/btroutma/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 source ${HOME}/.asdf/asdf.sh
