@@ -44,7 +44,7 @@
 
     # Langs
     ## Go
-    pkgs.go
+    pkgs.go_1_24
     pkgs.gopls
     pkgs.delve
     pkgs.ginkgo
