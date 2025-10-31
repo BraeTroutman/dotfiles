@@ -25,6 +25,7 @@
     pkgs.terraform
     pkgs.jira-cli-go
     pkgs.saml2aws
+    pkgs.stern
 
     # Claude dependencies
     pkgs.google-cloud-sdk
