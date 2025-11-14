@@ -49,6 +49,8 @@
     pkgs.gopls
     pkgs.delve
     pkgs.ginkgo
+    pkgs.golangci-lint-langserver
+    pkgs.golangci-lint
     ## Node
     pkgs.nodejs_24
     pkgs.typescript-language-server
@@ -57,8 +59,9 @@
     ## Python
     pkgs.ty
     pkgs.python313Packages.pip
-    ## Fish
+    ## Shells
     pkgs.fish-lsp
+    pkgs.bash-language-server
     ## HTML
     pkgs.superhtml
     pkgs.prettier
