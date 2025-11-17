@@ -70,6 +70,9 @@
     pkgs.rubyPackages.solargraph
     ## CSS
     pkgs.vscode-langservers-extracted
+    ## Haskell
+    pkgs.stack
+    pkgs.haskell-language-server
 
     # NUR packages
     pkgs.nur.repos.charmbracelet.crush
