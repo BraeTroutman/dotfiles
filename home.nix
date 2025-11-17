@@ -18,6 +18,7 @@
   home.packages = [
     # Red Hat specific dependencies
     pkgs.rosa
+    pkgs.rosa-nightly
     pkgs.ocm
     pkgs.awscli2
     pkgs.openshift
