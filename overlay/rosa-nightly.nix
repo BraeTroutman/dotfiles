@@ -2,7 +2,7 @@
 
 buildGoModule rec {
   pname = "rosa-nightly";
-  version = "a3ad0ff94c9a6d9ad3b2e4d06b24b349f939c12f";
+  version = "a67c0d9e41cf44ad55289d5a6eceb5f16f788dc8";
 
   src = fetchFromGitHub {
     owner = "openshift";
