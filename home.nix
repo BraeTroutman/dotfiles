@@ -25,6 +25,7 @@
     pkgs.awscli2
     pkgs.openshift
     pkgs.ocm-backplane
+    pkgs.osdctl
     pkgs.terraform
     pkgs.jira-cli-go
     pkgs.saml2aws
@@ -51,6 +52,7 @@
     pkgs.sops
     pkgs.just
     pkgs.zlib
+    pkgs.opencode
 
     # Langs
     ## Go
@@ -111,9 +113,7 @@
   # 
   home.sessionVariables = {
     NIXPKGS_ALLOW_UNFREE=1;
-    CLAUDE_CODE_USE_VERTEX=1;
     CLOUD_ML_REGION = "global";
-    ANTHROPIC_VERTEX_PROJECT_ID = "itpc-ca-8c18d68a6f";
     VERTEXAI_PROJECT = "itpc-ca-8c18d68a6f";
     VERTEXAI_LOCATION = "global";
     JIRA_URL = "https://redhat.atlassian.net";
